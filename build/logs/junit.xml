@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/var/www/components/assertionVoter" tests="5" assertions="9" failures="0" errors="0" time="0.083066">
+    <testsuite name="BWC\Component\AssertionVoter\Tests\DecisionManagerTest" file="/var/www/components/assertionVoter/src/BWC/Component/AssertionVoter/Tests/DecisionManagerTest.php" namespace="BWC\Component\AssertionVoter\Tests" fullPackage="BWC.Component.AssertionVoter.Tests" tests="2" assertions="6" failures="0" errors="0" time="0.061631">
+      <testcase name="evaluateShouldReturnArray" class="BWC\Component\AssertionVoter\Tests\DecisionManagerTest" file="/var/www/components/assertionVoter/src/BWC/Component/AssertionVoter/Tests/DecisionManagerTest.php" line="12" assertions="3" time="0.050480"/>
+      <testcase name="evaluateShouldReturnEmptyArray" class="BWC\Component\AssertionVoter\Tests\DecisionManagerTest" file="/var/www/components/assertionVoter/src/BWC/Component/AssertionVoter/Tests/DecisionManagerTest.php" line="30" assertions="3" time="0.011151"/>
+    </testsuite>
+    <testsuite name="BWC\Component\AssertionVoter\Tests\VoterSimpleTest" file="/var/www/components/assertionVoter/src/BWC/Component/AssertionVoter/Tests/VoterSimpleTest.php" namespace="BWC\Component\AssertionVoter\Tests" fullPackage="BWC.Component.AssertionVoter.Tests" tests="3" assertions="3" failures="0" errors="0" time="0.021435">
+      <testcase name="shouldBeConstructedWithArguments" class="BWC\Component\AssertionVoter\Tests\VoterSimpleTest" file="/var/www/components/assertionVoter/src/BWC/Component/AssertionVoter/Tests/VoterSimpleTest.php" line="11" assertions="0" time="0.004515"/>
+      <testcase name="shouldReturnNullAfterVoting" class="BWC\Component\AssertionVoter\Tests\VoterSimpleTest" file="/var/www/components/assertionVoter/src/BWC/Component/AssertionVoter/Tests/VoterSimpleTest.php" line="25" assertions="1" time="0.004638"/>
+      <testcase name="shouldReturnRoleStringAfterVoting" class="BWC\Component\AssertionVoter\Tests\VoterSimpleTest" file="/var/www/components/assertionVoter/src/BWC/Component/AssertionVoter/Tests/VoterSimpleTest.php" line="33" assertions="2" time="0.012282"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

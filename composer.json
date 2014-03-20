@@ -1,5 +1,8 @@
 {
     "name": "bwc/component-assertionVoter",
     "license": "MIT",
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
 }
