@@ -12,7 +12,7 @@ class DecisionManagerTest extends \PHPUnit_Framework_TestCase
     public function evaluateShouldReturnArray()
     {
         $self = new DecisionManager();
-        $voter = $this->createVoterSimpleMock();
+        $voter = $this->createVoterInterfaceMock();
         $voter
             ->expects($this->any())
             ->method('vote')
@@ -29,7 +29,7 @@ class DecisionManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function evaluateShouldReturnEmptyArray(){
         $self = new DecisionManager();
-        $voter = $this->createVoterSimpleMock();
+        $voter = $this->createVoterInterfaceMock();
         $voter
             ->expects($this->any())
             ->method('vote')
@@ -41,14 +41,8 @@ class DecisionManagerTest extends \PHPUnit_Framework_TestCase
         $this->assertEmpty($result);
     }
 
-    public function createVoterSimpleMock(){
-        return $this->getMockBuilder('BWC\Component\AssertionVoter\VoterSimple')
-            ->disableOriginalConstructor()
+    public function createVoterInterfaceMock(){
+        return $this->getMockBuilder('BWC\Component\AssertionVoter\VoterInterface')
             ->getMock();
-    }
-
-    public function createVoterSimpleStub(){
-        $voterSimpleMock = $this->createVoterSimpleMock();
-        return $voterSimpleMock;
     }
 }
