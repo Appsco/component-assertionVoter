@@ -1,0 +1,4 @@
+component-assertionVoter
+========================
+
+Assertion Voter
