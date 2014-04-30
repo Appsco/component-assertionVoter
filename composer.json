@@ -1,5 +1,5 @@
 {
-    "name": "bwc/component-assertionVoter",
+    "name": "appsco/component-assertionVoter",
     "license": "MIT",
     "minimum-stability": "stable",
     "autoload": {
