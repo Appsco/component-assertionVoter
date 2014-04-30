@@ -1,5 +1,5 @@
 {
-    "name": "appsco/component-assertionVoter",
+    "name": "appsco/component-assertion-voter",
     "license": "MIT",
     "minimum-stability": "stable",
     "autoload": {
