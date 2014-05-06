@@ -2,7 +2,7 @@
 namespace BWC\Component\AssertionVoter\Tests;
 
 
-use BWC\Component\AssertionVoter\DecisionManager;
+use BWC\Component\AssertionVoter\SimpleDecisionMaker;
 
 class DecisionManagerTest extends \PHPUnit_Framework_TestCase
 {
@@ -11,15 +11,14 @@ class DecisionManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function evaluateShouldReturnArray()
     {
-        $self = new DecisionManager();
+        $self = new SimpleDecisionMaker();
         $voter = $this->createVoterInterfaceMock();
         $voter
             ->expects($this->any())
             ->method('vote')
             ->will($this->returnValue('ROLE_ADMIN'));
-        $self->addVoter($voter);
 
-        $result = $self->evaluate(array());
+        $result = $self->evaluate(array(), [$voter]);
         $this->assertInternalType('array', $result);
         $this->assertContains('ROLE_ADMIN', $result);
     }
@@ -28,15 +27,14 @@ class DecisionManagerTest extends \PHPUnit_Framework_TestCase
      * @test
      */
     public function evaluateShouldReturnEmptyArray(){
-        $self = new DecisionManager();
+        $self = new SimpleDecisionMaker();
         $voter = $this->createVoterInterfaceMock();
         $voter
             ->expects($this->any())
             ->method('vote')
             ->will($this->returnValue(null));
-        $self->addVoter($voter);
 
-        $result = $self->evaluate(array());
+        $result = $self->evaluate(array(), [$voter]);
         $this->assertInternalType('array', $result);
         $this->assertEmpty($result);
     }
